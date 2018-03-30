@@ -31,7 +31,7 @@ data=$(uname -r)
 echo Kernel version: $data >> $outfile
 data=$(ls -clt / | tail -n 1 | awk '{ print $6, $7, $8 }')
 echo Installation date: $data >> $outfile
-data=$(hostname)
+data=$(hostname -f)
 echo Hostname: $data >> $outfile
 data=$(uptime -p |  cut -d 'p' -f 2)
 echo Uptime:  $data >> $outfile
