@@ -45,7 +45,10 @@ echo --- Network --- >> $outfile
 int=($(cat /proc/net/dev | awk -F : '{if (NR>2) print $1}'))
 intnumb=${#int[@]}
 for (( i=0; i<$intnumb; i++)); do
-data=$(ip -4 a show ${int[${i}]} | grep "inet " | awk '{print $2}' | awk 'NR > 1{print line", "}{line=$0;}END{print $0" "}'  )
-if [ -z "$data" ]; then data='-'; fi
+data=$(ip -4 a show ${int[${i}]} | grep "inet " | awk '{print $2}'  | awk 'NR > 1{print line", "}{line=$0;}END{print $0" "}')
+if [ "$data" = " " ]; then data='-'; fi
+
+ 
+
 echo ${int[${i}]}':' $data >> $outfile
 done
