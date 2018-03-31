@@ -29,7 +29,7 @@ data=$(cat /etc/*release* | grep PRETTY_NAME | cut  -d '"' -f 2)
 echo OS Distribution: $data >> $outfile
 data=$(uname -r)
 echo Kernel version: $data >> $outfile
-data=$(ls -clt / | tail -n 1 | awk '{ print $6, $7, $8 }')
+data=$(ls --time-style=long-iso -clt /var/log/installer | tail -n 1 | awk '{ print $6, $7 }')
 echo Installation date: $data >> $outfile
 data=$(hostname -f)
 echo Hostname: $data >> $outfile
