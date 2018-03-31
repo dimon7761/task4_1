@@ -8,10 +8,10 @@ OS Distribution: Debian GNU/Linux 9 (stretch)
 Kernel version: 4.9.0-6-amd64
 Installation date: 2018-03-22 13:35
 Hostname: dell.dlnet.kharkov.com
-Uptime: 2 days, 12 hours, 55 minutes
-Processes running: 226
+Uptime: 2 days, 14 hours, 10 minutes
+Processes running: 223
 User logged in: 1
 --- Network ---
 lo: 127.0.0.1/8
-enp5s0: -
+enp5s0: 10.0.0.1/8, 10.1.0.1/8
 wlp4s0: 10.157.1.2/24
