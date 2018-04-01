@@ -5,7 +5,7 @@ outfile='task4_1.out'
 
 
 #FILE
-outfile=$(echo `pwd`/$outfile)
+outfile=$(dirname $0)/$outfile
 if [ -f $outfile ]; then rm $outfile; fi; touch $outfile
 
 #HARDWARE
